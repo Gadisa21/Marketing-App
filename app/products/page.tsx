@@ -7,18 +7,18 @@ import productData from "@/data/products.json"
 import { useSearch } from "@/context/SearchContext"
 
 function Page() {
-  const { searchQuery } = useSearch()
+  const { searchQuery, selectedBrand } = useSearch()
   const router = useRouter()
 
   const handleCardClick = (id: number) => {
     router.push(`/product/${id}`)
   }
 
-  const filteredProducts = searchQuery
-    ? productData.filter((product: ProductType) =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : productData
+  const filteredProducts = productData.filter((product: ProductType) => {
+    const matchesSearchQuery = product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesBrand = selectedBrand ? product.brand === selectedBrand : true
+    return matchesSearchQuery && matchesBrand
+  })
 
   return (
     <div className="px-5 sm:px-10 py-10">
