@@ -1,29 +1,18 @@
-"use client"
+"use client";
 function Filter() {
   return (
-    <>
-        
-        <div className="brand-filter flex p-4 bg-gray-100 rounded-md shadow-md w-full sm:w-64">
-     
-
-      <select
-        className="w-full border p-2 rounded-md"
-        
-      >
+    <div className="mt-5 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 flex justify-between p-2 bg-[#FFF9EB] rounded-md shadow-md">
+      <select className="rounded-md bg-[#FFF9EB] p-2 border">
         <option value="">All Brands</option>
         <option value="Adidas">Adidas</option>
         <option value="Under Armour">Under Armour</option>
         <option value="Nike">Nike</option>
         <option value="Puma">Puma</option>
         <option value="Reebok">Reebok</option>
-        {/* Add more brands if needed */}
       </select>
-      <h2 className="text-xl font-semibold mb-4">Filter by Brand</h2>
+      <h2 className="text-lg font-semibold">Filter by Brand</h2>
     </div>
-        
-
-    </>
-  )
+  );
 }
 
-export default Filter
+export default Filter;
