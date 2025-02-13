@@ -3,8 +3,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { HiMenu, HiX } from "react-icons/hi"
+import {useSearch} from "@/context/SearchContext"
+
+
 
 function NavBar() {
+  const { searchQuery, setSearchQuery } = useSearch()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -42,7 +46,8 @@ function NavBar() {
           <div className="hidden sm:block relative">
             <input
               type="text"
-              id="customer_name"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full focus:ring-0 outline-none p-2 rounded-md pr-10"
               placeholder="Search for products"
             />
@@ -81,7 +86,8 @@ function NavBar() {
         <div className="relative">
           <input
             type="text"
-            id="customer_name"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full focus:ring-0 outline-none p-2 rounded-md pr-10"
             placeholder="Search for products"
           />
