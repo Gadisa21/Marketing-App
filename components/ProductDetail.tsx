@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import products from "@/data/products.json"
@@ -9,11 +9,7 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ id }) => {
-  const [clickedButton, setClickedButton] = useState<number | null>(null)
-
-  const handleButtonClick = (index: number) => {
-    setClickedButton(index)
-  }
+ 
 
   return (
     <>
