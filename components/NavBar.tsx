@@ -28,7 +28,7 @@ function NavBar() {
           <div className="hidden sm:flex space-x-8">
             <Link href="/">Home</Link>
             <Link href="/products">Products</Link>
-            <Link href="/cart">Brand</Link>
+            <Link href="/products">Brand</Link>
           </div>
         </div>
 

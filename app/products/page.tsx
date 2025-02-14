@@ -11,7 +11,7 @@ function Page() {
   const router = useRouter()
 
   const handleCardClick = (id: number) => {
-    router.push(`/product/${id}`)
+    router.push(`/products/${id}`)
   }
 
   const filteredProducts = productData.filter((product: ProductType) => {

@@ -48,7 +48,7 @@ function Page() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
       >
-        <Link href="/products" className="mx-auto p-4 w-fit text-lg font-semibold text-white block bg-black rounded-md">
+        <Link href="/products" className="mx-auto p-4 w-fit text-lg font-semibold mb-10 text-white block  rounded-md bg-[#252641]">
           Explore More Products
         </Link>
       </motion.div>
